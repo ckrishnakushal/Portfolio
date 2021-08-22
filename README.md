@@ -1,2 +1,2 @@
 # TestGit
-Trying git
+GIT
