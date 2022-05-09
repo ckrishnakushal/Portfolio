@@ -117,6 +117,7 @@ function finalpt(value) {
 function send() {  
   var result = window.text1 + window.text2;
   document.getElementById("resultt").value = result;
+  result = result.toString();
  var url = "https://io.adafruit.com/api/v2/1pratham1/feeds/call-path/data";
 
 var xhr = new XMLHttpRequest();
