@@ -165,7 +165,7 @@ function send() {
 
 <div class="container">
   <div class="center">
-  <button onclick="sendkk()" style="height:30px;width:150px">SEND PAT</button>
+  <button onclick="send();sendkk()" style="height:30px;width:150px">SEND PAT</button>
   <input type="text" value="" style="height:20px;width:100px;text-align:center;" id="resultt">
   </div>
 </div>
@@ -186,7 +186,7 @@ xhr.onreadystatechange = function () {
       console.log(xhr.responseText);
    }};
 
-var data = '{"value": 50}';
+var data = document.getElementById("resultt").value;
 
 xhr.send(data);
 
