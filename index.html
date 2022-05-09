@@ -165,10 +165,34 @@ function send() {
 
 <div class="container">
   <div class="center">
-  <button onclick="send()" style="height:30px;width:150px">SEND PATH</button>
+  <button onclick="sendkk()" style="height:30px;width:150px">SEND PATH</button>
   <input type="text" value="" style="height:20px;width:100px;text-align:center;" id="resultt">
   </div>
 </div>
+  
+  <script>
+function myFunction() {
+var url = "https://io.adafruit.com/api/v2/1pratham1/feeds/call-path/data";
+
+var xhr = new XMLHttpRequest();
+xhr.open("POST", url);
+
+xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader("X-AIO-Key", "6c45634a68724fac97bc61e5165e7094");
+
+xhr.onreadystatechange = function () {
+   if (xhr.readyState === 4) {
+      console.log(xhr.status);
+      console.log(xhr.responseText);
+   }};
+
+var data = '{"value": 50}';
+
+xhr.send(data);
+
+
+}
+</script>
 
 </body>
 </html>
