@@ -131,7 +131,7 @@ xhr.onreadystatechange = function () {
       console.log(xhr.responseText);
    }};
 
-var data = result;
+var data = '{"value": '+result+'}';
 
 xhr.send(data);
 
